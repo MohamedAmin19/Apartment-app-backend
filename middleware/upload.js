@@ -1,4 +1,5 @@
 import multer from 'multer';
-const upload = multer({ dest: 'uploads/' }); // Saves files to 'uploads/' folder
+// Saves files to 'uploads/' folder
+const upload = multer({ dest: 'uploads/' }); 
 
 export default upload;

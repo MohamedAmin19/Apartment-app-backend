@@ -48,7 +48,6 @@ router.post('/', upload.array('images'), async (req, res) => {
         // Save the apartment to the database
         await apartment.save();
 
-        // Respond with the created apartment including image URLs
         res.status(201).json(apartment);
     } catch (error) {
         console.error("Error:", error);

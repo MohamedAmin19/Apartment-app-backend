@@ -1,4 +1,3 @@
-// Import required modules
 import express from 'express';
 import bodyParser from 'body-parser';
 import apartmentRoutes from './routes/apartments';
@@ -16,7 +15,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-// Create Express app
 const app = express();
 const cors = require('cors');
 const PORT = 3001;
@@ -25,12 +23,7 @@ const PORT = 3001;
 connectToDatabase();
 
 app.use(cors());
-
-// Middleware to parse JSON bodies
 app.use(bodyParser.json());
-
-
-// Routes
 app.use('/apartments', apartmentRoutes);
 
 // Start the server
